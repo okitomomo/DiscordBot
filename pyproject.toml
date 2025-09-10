@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "discord_bot"         # パッケージ名
+version = "0.1.0"
+description = "okitomo's Discord Bot"
+authors = [{ name = "okitomo" }]
+requires-python = ">=3.10"
+dependencies = [
+    "dotenv>=0.9.9",
+    "discord>=2.3.2",
+    "mylib @ git+ssh://git@github.com/okitomomo/pymylib.git@main",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
